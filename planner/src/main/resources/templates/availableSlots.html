@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+ <table border>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th >Resource Name</th>
+        <th>From Date Time</th>
+        <th>To Date Time</th>
+        <th>Action</th>
+      </tr>
+      <tr th:each="rs : ${resource}">
+		 <td th:text="${{rs.id}}">13/01/2011</td>
+         <td th:text="${{rs.resource}}">Check</td>
+        <td th:text="${{rs.fromTime}}">10/10/2018</td>
+        <td th:text="${{rs.toTime}}">10/1/2018</td>
+        <td>Book</td>
+      
+      </tr>
+      
+      
+    </thead>
+
+</body>
+</html>
